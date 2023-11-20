@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+
+
+<body>
+  <h1 id="title">Customer survey</h1>
+  <p id="description">Thank you for using our services and products. Please take a few minutes to rate us so we can serve you better.</p>
+  <form id="survey-form">
+    <fieldset>
+        <h2>Your details</h2>
+        <label for="name-label" id="name-label">Enter your full name:
+            <input id="name" name="name" type="text" placeholder="Jamie Johnson" required/>
+        </label>
+
+        <label for="email-label" id="email-label">Enter your email:
+            <input id="email" name="email" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder=" xxxx@gmail.com" required/>
+        </label>
+
+        <label for="number-label" id="number-label">Please verify your age:
+            <input id="number" name="age" type="number" min="16" max="110" placeholder="24" required/>
+        </label>
+
+        <label for="dropdown"> What is your gender?
+          <select id="dropdown" name="dropdown"> 
+            <option value="0">Please choose one</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">Transgender</option>
+            <option value="4">other</option> 
+          </select>
+        </label>
+
+        <label for="other">If "other":
+            <input id="other" name="other" type="text" pattern="[a-z]"/>
+        </label>
+
+        
+    </fieldset>
+        
+    
+                        <!-- how did we do*/ -->
+
+    <fieldset>
+        <h2>Your purchase</h2>
+        <label class="who-the-purchase-for">Who was the purchase for?
+            <label for="myself">
+                <input value="0" id="myself" type="checkbox" name="myself" class="inline" checked/>Myself
+            </label> 
+            <label for="friends">
+                <input  value="1"id="friends" type="checkbox" name="friends" class="inline"/>Friends
+            </label>
+            <label for="family">
+                <input value="2" id="family" type="checkbox" name="family" class="inline"/>Family
+            </label>
+            <label for="others">
+                <input value="3" id="others" type="checkbox" name="others" class="inline"/>Others
+            </label>
+        </label>
+
+        <label for="services"> How would you rate our product from 1-5? (1=poor, 5=excellent)
+            <label for="one">
+                <input value="0" id="one" type="radio" name="rate" class="inline"/>1
+            </label> 
+            <label for="two">
+                <input value="1" id="two" type="radio" name="rate" class="inline"/>2
+            </label>
+            <label for="three">
+                <input value="2" id="three" type="radio" name="rate" class="inline"/>3
+            </label>
+            <label for="four">
+                <input value="3" id="four" type="radio" name="rate" class="inline"/>4
+            </label>
+            <label for="five">
+                <input value="4" id="five" type="radio" name="rate" class="inline" checked/>5
+            </label>
+        </label>
+
+        <label for="services"> Would you recommend us to others?
+            <label for="yes">
+                <input value="0" id="yes" type="radio" name="recommend" class="inline"/>Yes
+            </label> 
+            <label for="no">
+                <input value="1" id="no" type="radio" name="recommend" class="inline"/>No
+            </label>
+            <label for="maybe">
+                <input value="2" id="maybe" type="radio" name="recommend" class="inline"/>Maybe
+            </label>
+        </label>
+        
+    </fieldset>
+
+
+    
+
+                        <!-- Other suggestions*/ -->
+
+                        
+    <fieldset>
+        <label for="product-make-you-happy">What part of our service/ product makes you happy?
+            <textarea id="product-make-you-happy" name="product-make-you-happy" placeholder="Tell us your opinions..." rows="10" cols="55"></textarea>
+        </label>
+        <label for="problems">What are your main problems with our product/service?
+            <textarea id="problems" name="problems" placeholder="Tell us your opinions..." rows="10" cols="55"></textarea>
+        </label>
+        <label for="improve">How else can we improve?
+            <textarea id="improve" name="improve" placeholder="Tell us your opinions..." rows="10" cols="55"></textarea>
+        </label>
+
+
+    </fieldset>
+
+
+
+
+
+
+
+                        <!-- submit buttom*/ --> 
+
+
+
+    <input type="submit" id="submit" value="submit"/>
+
+
+  </form>
+</body>
+
+</html>
